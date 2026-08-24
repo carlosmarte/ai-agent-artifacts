@@ -1,0 +1,89 @@
+[
+  {
+    "_path": "<REPO>/.agents/skills/agent-skill-kit-commons/fixtures/prompt/registry/prompt-fix-a/SKILL.md",
+    "allowed_tools": [],
+    "compatibility": null,
+    "dependencies": [],
+    "description": "Leaf fixture skill A — no dependencies, sits at the bottom of the topological order for prompt-emitter parity tests; trivial body.",
+    "license": null,
+    "metadata": {},
+    "name": "prompt-fix-a",
+    "tier": "org"
+  },
+  {
+    "_path": "<REPO>/.agents/skills/agent-skill-kit-commons/fixtures/prompt/registry/prompt-fix-b/SKILL.md",
+    "allowed_tools": [],
+    "compatibility": null,
+    "dependencies": [
+      {
+        "name": "prompt-fix-a",
+        "origin": "in_repo",
+        "owner": null,
+        "repo": null,
+        "version_range": null
+      }
+    ],
+    "description": "Fixture skill B — depends on prompt-fix-a, sits second in topological order; trivial body for parity tests.",
+    "license": null,
+    "metadata": {},
+    "name": "prompt-fix-b",
+    "tier": "org"
+  },
+  {
+    "_path": "<REPO>/.agents/skills/agent-skill-kit-commons/fixtures/prompt/registry/prompt-fix-c/SKILL.md",
+    "allowed_tools": [],
+    "compatibility": null,
+    "dependencies": [
+      {
+        "name": "prompt-fix-b",
+        "origin": "in_repo",
+        "owner": null,
+        "repo": null,
+        "version_range": null
+      }
+    ],
+    "description": "Fixture skill C — depends on prompt-fix-b, sits third in topological order; trivial body for parity tests.",
+    "license": null,
+    "metadata": {},
+    "name": "prompt-fix-c",
+    "tier": "team"
+  },
+  {
+    "_path": "<REPO>/.agents/skills/agent-skill-kit-commons/fixtures/prompt/registry/prompt-fix-d/SKILL.md",
+    "allowed_tools": [],
+    "compatibility": null,
+    "dependencies": [
+      {
+        "name": "prompt-fix-c",
+        "origin": "in_repo",
+        "owner": null,
+        "repo": null,
+        "version_range": null
+      }
+    ],
+    "description": "Fixture skill D — depends on prompt-fix-c, sits fourth in topological order; trivial body for parity tests.",
+    "license": null,
+    "metadata": {},
+    "name": "prompt-fix-d",
+    "tier": "app"
+  },
+  {
+    "_path": "<REPO>/.agents/skills/agent-skill-kit-commons/fixtures/prompt/registry/prompt-fix-e/SKILL.md",
+    "allowed_tools": [],
+    "compatibility": null,
+    "dependencies": [
+      {
+        "name": "prompt-fix-d",
+        "origin": "in_repo",
+        "owner": null,
+        "repo": null,
+        "version_range": null
+      }
+    ],
+    "description": "Fixture skill E — depends on prompt-fix-d, sits fifth (root) in topological order; trivial body for parity tests.",
+    "license": null,
+    "metadata": {},
+    "name": "prompt-fix-e",
+    "tier": "project"
+  }
+]

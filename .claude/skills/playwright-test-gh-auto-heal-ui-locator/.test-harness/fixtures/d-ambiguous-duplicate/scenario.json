@@ -1,0 +1,14 @@
+{
+  "id": "d-ambiguous-duplicate",
+  "title": "Two identical candidates — ambiguous, must not guess",
+  "story": "The product grid now renders two identical 'Add to cart' buttons. Both score the same against the old element, so the healer must report AMBIGUOUS and file an issue rather than risk picking the wrong one (a strict-mode trap).",
+  "specLine": 5,
+  "failing": { "api": "locator", "selector": ".add" },
+  "errorMessage": "locator.click: Error: strict mode violation: page.locator('.add') resolved to 2 elements",
+  "threshold": 0.45,
+  "expected": {
+    "status": "AMBIGUOUS",
+    "delivery": "issue",
+    "locator": null
+  }
+}

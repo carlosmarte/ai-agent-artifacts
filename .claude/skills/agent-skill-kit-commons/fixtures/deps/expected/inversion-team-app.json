@@ -1,0 +1,1 @@
+{"conflicts":[],"cycles":[],"inversions":[{"from":"team-a","fromTier":"team","to":"app-b","toTier":"app"}],"missing":[],"order":["app-b","team-a"],"unpinned":[{"code":"W020_UNPINNED_DEPENDENCY","field":"dependencies","message":"team-a: unpinned dependency 'app-b'; pin against tag 'app-b/v<X.Y.Z>'","severity":"warn"}]}

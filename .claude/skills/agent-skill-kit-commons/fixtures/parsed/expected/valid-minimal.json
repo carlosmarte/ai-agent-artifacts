@@ -1,0 +1,1 @@
+{"allowed_tools":[],"body_lines":6,"compatibility":null,"dependencies":[],"description":"Minimal parsed fixture exercising only the three required frontmatter fields, used to freeze parser-output snapshots for cross-runtime drift detection.","license":null,"metadata":{},"name":"org-parsed-minimal","source_offset":208,"tier":"org"}

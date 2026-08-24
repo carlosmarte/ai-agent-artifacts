@@ -1,0 +1,14 @@
+{
+  "id": "b-role-text-rename",
+  "title": "Class rename — only role + visible text survive (no testid)",
+  "story": "The cart link kept its role and text but lost its old class. With no data-testid the best anchor is getByRole + accessible name. Confidence lands ~0.49, so this scenario uses a tuned threshold (see README on the MAX_SCORE normalization).",
+  "specLine": 5,
+  "failing": { "api": "locator", "selector": ".nav-cart" },
+  "errorMessage": "locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for page.locator('.nav-cart')\n  - locator resolved to 0 elements",
+  "threshold": 0.45,
+  "expected": {
+    "status": "HEALED",
+    "delivery": "pr",
+    "locator": "getByRole('link', { name: 'View cart' })"
+  }
+}

@@ -1,0 +1,7 @@
+[
+  { "id": "eval-call",        "pattern": "\\beval\\s*\\(",                "languages": [".js", ".mjs", ".py", ".sh", ".bash"] },
+  { "id": "exec-call",        "pattern": "\\bexec\\s*\\(",                "languages": [".js", ".mjs", ".py"] },
+  { "id": "subprocess-shell", "pattern": "subprocess\\.(?:run|Popen|call|check_output|check_call)\\s*\\([^)]*shell\\s*=\\s*True", "languages": [".py"] },
+  { "id": "os-system",        "pattern": "\\bos\\.system\\s*\\(",         "languages": [".py"] },
+  { "id": "shell-backticks",  "pattern": "`[^`]*\\$\\{[^}]+\\}[^`]*`",    "languages": [".sh", ".bash", ".js", ".mjs"] }
+]

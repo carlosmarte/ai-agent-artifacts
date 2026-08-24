@@ -1,0 +1,36 @@
+{
+  "name": "skills-ref-mjs",
+  "version": "0.0.1",
+  "description": "Reference implementation of the Agent Skills validator/linter/auditor toolkit (Node ESM).",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "src/index.mjs",
+  "bin": {
+    "skills-ref": "bin/skills-ref",
+    "dump-parsed": "bin/dump-parsed.mjs",
+    "check-naming": "bin/check-naming.mjs",
+    "dump-registry": "bin/dump-registry.mjs",
+    "dump-deps": "bin/dump-deps.mjs",
+    "dump-score": "bin/dump-score.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint .",
+    "build": "node -e \"console.log('pure-ESM; nothing to transpile')\"",
+    "noop": "node -e \"process.exit(0)\"",
+    "ci": "npm run lint && npm test"
+  },
+  "dependencies": {
+    "yaml": "^2.4.0"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0",
+    "eslint": "^9.0.0"
+  }
+}

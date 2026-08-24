@@ -1,0 +1,7 @@
+<available_skills>
+  <skill name="prompt-fix-a" tier="org">Leaf fixture skill A — no dependencies, sits at the bottom of the topological order for prompt-emitter parity tests; trivial body.</skill>
+  <skill name="prompt-fix-b" tier="org">Fixture skill B — depends on prompt-fix-a, sits second in topological order; trivial body for parity tests.</skill>
+  <skill name="prompt-fix-c" tier="team">Fixture skill C — depends on prompt-fix-b, sits third in topological order; trivial body for parity tests.</skill>
+  <skill name="prompt-fix-d" tier="app">Fixture skill D — depends on prompt-fix-c, sits fourth in topological order; trivial body for parity tests.</skill>
+  <skill name="prompt-fix-e" tier="project">Fixture skill E — depends on prompt-fix-d, sits fifth (root) in topological order; trivial body for parity tests.</skill>
+</available_skills>

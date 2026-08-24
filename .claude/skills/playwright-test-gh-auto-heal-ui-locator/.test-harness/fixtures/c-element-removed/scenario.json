@@ -1,0 +1,14 @@
+{
+  "id": "c-element-removed",
+  "title": "Element genuinely removed — no safe heal exists",
+  "story": "The promo banner was deleted in a redesign. No candidate in the new DOM scores above threshold, so the healer must NOT invent a locator — it files an issue for human triage.",
+  "specLine": 5,
+  "failing": { "api": "locator", "selector": "#promo-banner" },
+  "errorMessage": "locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for page.locator('#promo-banner')\n  - locator resolved to 0 elements",
+  "threshold": 0.45,
+  "expected": {
+    "status": "ELEMENT_REMOVED",
+    "delivery": "issue",
+    "locator": null
+  }
+}

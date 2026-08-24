@@ -1,0 +1,82 @@
+{
+  "01-vague-baseline": {
+    "breakdown": {
+      "actionVerbs": 0,
+      "keywordDensity": 0,
+      "length": 14,
+      "specificity": 10,
+      "triggerPhrases": 0
+    },
+    "score": 24
+  },
+  "02-no-verb-no-trigger": {
+    "breakdown": {
+      "actionVerbs": 0,
+      "keywordDensity": 0,
+      "length": 11,
+      "specificity": 20,
+      "triggerPhrases": 0
+    },
+    "score": 31
+  },
+  "03-verb-first-no-trigger": {
+    "breakdown": {
+      "actionVerbs": 20,
+      "keywordDensity": 25,
+      "length": 13,
+      "specificity": 20,
+      "triggerPhrases": 20
+    },
+    "score": 98
+  },
+  "04-verb-and-trigger-short": {
+    "breakdown": {
+      "actionVerbs": 20,
+      "keywordDensity": 25,
+      "length": 12,
+      "specificity": 20,
+      "triggerPhrases": 20
+    },
+    "score": 97
+  },
+  "05-rich-trigger-long": {
+    "breakdown": {
+      "actionVerbs": 20,
+      "keywordDensity": 23,
+      "length": 15,
+      "specificity": 20,
+      "triggerPhrases": 20
+    },
+    "score": 98
+  },
+  "06-too-long": {
+    "breakdown": {
+      "actionVerbs": 20,
+      "keywordDensity": 7,
+      "length": 14,
+      "specificity": 20,
+      "triggerPhrases": 20
+    },
+    "score": 81
+  },
+  "07-very-short": {
+    "breakdown": {
+      "actionVerbs": 20,
+      "keywordDensity": 25,
+      "length": 3,
+      "specificity": 20,
+      "triggerPhrases": 0
+    },
+    "score": 68
+  },
+  "08-multi-vague": {
+    "breakdown": {
+      "actionVerbs": 0,
+      "keywordDensity": 0,
+      "length": 15,
+      "specificity": 0,
+      "triggerPhrases": 20
+    },
+    "score": 35
+  }
+}

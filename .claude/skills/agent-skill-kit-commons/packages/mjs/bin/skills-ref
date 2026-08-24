@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+import { dispatch } from "../src/cli/dispatch.mjs";
+
+try {
+  const { exitCode, output } = await dispatch(process.argv.slice(2));
+  if (output) process.stdout.write(output);
+  process.exit(exitCode);
+} catch (e) {
+  process.stderr.write(`skills-ref: fatal: ${e.message}\n`);
+  process.exit(70);
+}

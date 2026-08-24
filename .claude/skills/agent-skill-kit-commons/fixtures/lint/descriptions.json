@@ -1,0 +1,42 @@
+[
+  {
+    "id": "01-vague-baseline",
+    "description": "A useful tool that helps with stuff related to skills.",
+    "body": "This skill does various things and works with multiple agents."
+  },
+  {
+    "id": "02-no-verb-no-trigger",
+    "description": "The thing exists here with description text.",
+    "body": "body content"
+  },
+  {
+    "id": "03-verb-first-no-trigger",
+    "description": "Validate the SKILL.md frontmatter for correctness.",
+    "body": "Validate SKILL.md frontmatter for correctness."
+  },
+  {
+    "id": "04-verb-and-trigger-short",
+    "description": "Lint a skill when its description seems unclear.",
+    "body": "Lint a skill when its description seems unclear."
+  },
+  {
+    "id": "05-rich-trigger-long",
+    "description": "Validate a SKILL.md frontmatter against the agentskills.io spec. Use when the user asks to lint, check, or validate a skill before committing.",
+    "body": "Validate SKILL.md frontmatter against the agentskills.io spec. Lint a skill before committing. Check, validate, user, asks."
+  },
+  {
+    "id": "06-too-long",
+    "description": "Validate the SKILL.md frontmatter against the agentskills.io specification when the user invokes the lint, audit, or check verb against a skill directory containing one or more skills, recursively descending into the tree while respecting the maxDepth setting, emitting JSON or human output, and exiting with a code that gates CI.",
+    "body": "validate frontmatter spec lint audit check skill directory recursively"
+  },
+  {
+    "id": "07-very-short",
+    "description": "Lint skills.",
+    "body": "Lint skills."
+  },
+  {
+    "id": "08-multi-vague",
+    "description": "Helps with stuff and assists with general purpose tasks for users that need a useful for tool.",
+    "body": "body content"
+  }
+]

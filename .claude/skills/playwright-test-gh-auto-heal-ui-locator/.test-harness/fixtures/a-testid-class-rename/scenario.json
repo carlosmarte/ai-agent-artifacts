@@ -1,0 +1,14 @@
+{
+  "id": "a-testid-class-rename",
+  "title": "Tailwind class rename — data-testid + role survive",
+  "story": "A frontend dev replaced `btn-primary` with `btn-cta-2026 rounded-xl`. The button keeps its data-testid and role, so the healer should resolve a rock-solid getByTestId locator.",
+  "specLine": 5,
+  "failing": { "api": "locator", "selector": ".btn-primary" },
+  "errorMessage": "locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for page.locator('.btn-primary')\n  - locator resolved to 0 elements",
+  "threshold": 0.75,
+  "expected": {
+    "status": "HEALED",
+    "delivery": "pr",
+    "locator": "getByTestId('place-order')"
+  }
+}

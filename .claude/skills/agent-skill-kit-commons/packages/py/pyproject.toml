@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "skills-ref"
+version = "0.0.1"
+description = "Reference implementation of the Agent Skills validator/linter/auditor toolkit (Python)."
+requires-python = ">=3.11"
+dependencies = [
+    "ruamel.yaml>=0.18",
+]
+
+[project.scripts]
+skills-ref    = "skills_ref.cli:main"
+dump-parsed   = "skills_ref.scripts.dump_parsed:main"
+check-naming  = "skills_ref.scripts.check_naming:main"
+dump-registry = "skills_ref.scripts.dump_registry:main"
+dump-deps     = "skills_ref.scripts.dump_deps:main"
+dump-score    = "skills_ref.scripts.dump_score:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/skills_ref"]
+
+# Asset symlinks under src/skills_ref/assets/ point at the sibling mjs package's assets/.
+# Hatchling cannot follow them through the sdist→wheel round-trip; instead,
+# force-include the real files from the mjs package directly into the wheel.
+# Keeps the runtime load path (src/skills_ref/assets/<file>) stable.
+# Note: the `../mjs/` path below relies on mjs and py living as siblings; both packages
+# must move together if either is relocated. They currently sit under
+# .agents/skills/agent-skill-kit-commons/packages/{mjs,py}.
+[tool.hatch.build.targets.wheel.force-include]
+"../mjs/assets/action_verbs.txt"        = "skills_ref/assets/action_verbs.txt"
+"../mjs/assets/injection_patterns.json" = "skills_ref/assets/injection_patterns.json"
+"../mjs/assets/negative_query_bank.txt" = "skills_ref/assets/negative_query_bank.txt"
+"../mjs/assets/stop_words.txt"          = "skills_ref/assets/stop_words.txt"
+"../mjs/assets/vague_phrases.txt"       = "skills_ref/assets/vague_phrases.txt"
+"../mjs/assets/vendor_prefixes.txt"     = "skills_ref/assets/vendor_prefixes.txt"
+
+# Source distribution: exclude the broken-symlink assets dir; the wheel target
+# above ships the real bytes.
+[tool.hatch.build.targets.sdist]
+exclude = ["src/skills_ref/assets/"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+]
